@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ejercicio_05</string>
+    <string name="titulo">Título: </string>
+    <string name="texto">Texto: </string>
+    <string name="mensajeToast1">El mensaje es para: %1$s</string>
+    <string name="mensajeToast2">El mensaje es: %1$s</string>
+</resources>

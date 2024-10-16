@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".FormularioFragment">
+
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Introduce tu nombre"
+                android:inputType="text|textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/flow" />
+
+            <EditText
+                android:id="@+id/txtDirección"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Introduce tu dirección"
+                android:inputType="text|textPostalAddress"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/txtNombre" />
+
+            <EditText
+                android:id="@+id/txtTelefono"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Introduce tu número de teléfono"
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@+id/txtDirección" />
+
+            <CheckBox
+                android:id="@+id/chkAceptar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="180dp"
+                android:text="@string/privacidad"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtTelefono" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnEnviar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@android:drawable/ic_input_add"
+                app:layout_anchorGravity="bottom|end"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/txtPreguntaPizza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/pregunta_pizza"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="72dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="48dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrera1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="radioGroupTipo"
+                app:layout_constraintTop_toBottomOf="@id/radioGroupTipo" />
+
+            <TextView
+                android:id="@+id/txtPreguntaExtra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/pregunta_extra"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@id/barrera1" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/barrera2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="chipExtra3,chipExtra2,chipExtra1,chipExtra4" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipExtra3"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cebolla"
+                app:layout_constraintBottom_toBottomOf="@+id/chipExtra4"
+                app:layout_constraintEnd_toStartOf="@+id/chipExtra4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/chipExtra2"
+                app:layout_constraintTop_toTopOf="@+id/chipExtra4"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipExtra2"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jamon"
+                app:layout_constraintBottom_toBottomOf="@+id/chipExtra3"
+                app:layout_constraintEnd_toStartOf="@+id/chipExtra3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/chipExtra1"
+                app:layout_constraintTop_toTopOf="@+id/chipExtra3"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipExtra1"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/queso"
+                app:layout_constraintBottom_toBottomOf="@+id/chipExtra2"
+                app:layout_constraintEnd_toStartOf="@+id/chipExtra2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/chipExtra2"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipExtra4"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/salsa"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/chipExtra3"
+                app:layout_constraintTop_toBottomOf="@+id/txtPreguntaExtra" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupTipo"
+                android:layout_width="111dp"
+                android:layout_height="194dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toBottomOf="@+id/txtPreguntaPizza">
+
+                <RadioButton
+                    android:id="@+id/optPizza1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/margarita" />
+
+                <RadioButton
+                    android:id="@+id/optPizza2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cuatro_estaciones" />
+
+                <RadioButton
+                    android:id="@+id/optPizza3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/carbonara" />
+
+                <RadioButton
+                    android:id="@+id/optPizza4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/romana" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/txtBebida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/pregunta_bebida"
+                app:layout_constraintStart_toStartOf="@+id/guideline5"
+                app:layout_constraintTop_toBottomOf="@id/barrera2" />
+
+            <ImageView
+                android:id="@+id/btnBebida1"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/bebida1"
+                tools:src="@drawable/bebida1" />
+
+            <ImageView
+                android:id="@+id/btnBebida2"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/bebida2"
+                tools:src="@drawable/bebida2" />
+
+            <ImageView
+                android:id="@+id/btnBebida3"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/bebida3"
+                tools:src="@drawable/bebida3" />
+
+            <ImageView
+                android:id="@+id/btnBebida4"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/bebida4"
+                tools:src="@drawable/bebida4" />
+
+            <ImageView
+                android:id="@+id/btnBebida5"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/bebida5"
+                tools:src="@drawable/bebida5" />
+
+            <ImageView
+                android:id="@+id/btnBebida6"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/bebida6"
+                tools:src="@drawable/bebida6" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="16dp"
+                app:constraint_referenced_ids="btnBebida1,btnBebida2,btnBebida3,btnBebida4,btnBebida5,btnBebida6"
+                app:flow_horizontalGap="8dp"
+                app:flow_horizontalStyle="packed"
+                app:flow_verticalGap="8dp"
+                app:flow_wrapMode="chain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtBebida" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

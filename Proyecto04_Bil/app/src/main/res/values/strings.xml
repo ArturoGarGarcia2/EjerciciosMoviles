@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Proyecto04_Bil</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pregunta_pizza">¿Qué tipo de pizza te gustaría tomar?</string>
+    <string name="margarita">Margarita</string>
+    <string name="cuatro_estaciones">Cuatro estaciones</string>
+    <string name="carbonara">Carbonara</string>
+    <string name="romana">Romana</string>
+    <string name="pregunta_extra">Selecciona los extras que quieras</string>
+    <string name="queso">Queso</string>
+    <string name="jamon">Jamón</string>
+    <string name="cebolla">Cebolla</string>
+    <string name="salsa">Salsa</string>
+    <string name="pregunta_bebida">Elige tu bebida</string>
+    <string name="privacidad">He leído y acepto los términos de privacidad</string>
+</resources>

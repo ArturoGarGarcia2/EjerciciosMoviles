@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Proyecto3_BIL</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="pausa">Pausa</string>
+    <string name="reiniciar">Reiniciar</string>
+</resources>

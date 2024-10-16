@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Proyecto2_Bil</string>
+    <string-array name="cursos">
+        <item>1º DAM</item>
+        <item>2º DAM</item>
+    </string-array>
+    <string name="textoBoton1">Select Course</string>
+    <string name="sinCurso">No course selected</string>
+    <string name="observaciones">Add observations</string>
+    <string name="textoBoton2">Send</string>
+    <string name="programacion">Proggraming</string>
+    <string name="mensajeToast">The observation are: %1$s</string>
+</resources>
