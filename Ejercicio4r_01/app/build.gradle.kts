@@ -7,6 +7,10 @@ android {
     namespace = "dam.moviles.ejercicio4r_01"
     compileSdk = 34
 
+    buildFeatures{
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "dam.moviles.ejercicio4r_01"
         minSdk = 26
@@ -37,6 +41,7 @@ android {
 
 dependencies {
 
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

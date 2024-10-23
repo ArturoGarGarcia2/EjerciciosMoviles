@@ -7,13 +7,110 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/txtDecimal1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:hint="@string/valor_1"
+        android:inputType="numberDecimal"
+        android:padding="16dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtDecimal2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/valor_2"
+        android:inputType="numberDecimal"
+        android:padding="16dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/txtDecimal1" />
+
+    <EditText
+        android:id="@+id/txtResultado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/resultado"
+        android:inputType="none"
+        android:padding="16dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/flowBotones" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flowBotones"
+        android:layout_width="376dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        app:constraint_referenced_ids="btnSuma,btnResta,btnMulti,btnDivi"
+        app:layout_constraintTop_toBottomOf="@+id/txtDecimal2"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnResta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="238dp" />
+
+    <Button
+        android:id="@+id/btnMulti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        tools:layout_editor_absoluteX="199dp"
+        tools:layout_editor_absoluteY="238dp" />
+
+    <Button
+        android:id="@+id/btnDivi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        tools:layout_editor_absoluteX="290dp"
+        tools:layout_editor_absoluteY="238dp" />
+
+    <Button
+        android:id="@+id/btnSuma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="238dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="flowBotones"
+        app:layout_constraintTop_toBottomOf="@id/flowBotones" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
